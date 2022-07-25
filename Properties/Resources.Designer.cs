@@ -63,6 +63,26 @@ namespace StarCraft_Remastered_Language_Changer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _17877_warcraft_iii_reforged_story_campaign_backgrounds_2285155037 {
+            get {
+                object obj = ResourceManager.GetObject("17877-warcraft-iii-reforged-story-campaign-backgrounds-2285155037", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CTcLVGb_758766784 {
+            get {
+                object obj = ResourceManager.GetObject("CTcLVGb-758766784", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thumb_1920_534457_3676262569 {
             get {
                 object obj = ResourceManager.GetObject("thumb-1920-534457-3676262569", resourceCulture);
