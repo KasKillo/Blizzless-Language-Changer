@@ -173,7 +173,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 32);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Created by : Ianis";
+            this.label5.Text = "Created by : KasKillo";
             // 
             // Form1
             // 
