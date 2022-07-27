@@ -10,19 +10,47 @@ namespace StarCraft_Remastered_Language_Changer
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 1)
+            //OLD CODE
+            //if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 1)
+            //{
+            //    if (comboBox1.SelectedIndex == 0)
+            //    {
+            //        pictureBox1.Image = Properties.Resources._17877_warcraft_iii_reforged_story_campaign_backgrounds_2285155037;
+            //    }
+            //    else if (comboBox1.SelectedIndex == 1)
+            //    {
+            //        pictureBox1.Image = Properties.Resources.thumb_1920_534457_3676262569;
+            //    }
+            //    label2.Visible = true;
+            //    comboBox2.Visible = true;
+            //}
+
+            switch (comboBox1.SelectedIndex)
             {
-                if (comboBox1.SelectedIndex == 0)
-                {
+                case 0:
                     pictureBox1.Image = Properties.Resources._17877_warcraft_iii_reforged_story_campaign_backgrounds_2285155037;
-                }
-                else if (comboBox1.SelectedIndex == 1)
-                {
+                    label2.Visible = true;
+                    comboBox2.Visible = true;
+                    break;
+                case 1:
                     pictureBox1.Image = Properties.Resources.thumb_1920_534457_3676262569;
-                }
-                label2.Visible = true;
-                comboBox2.Visible = true;
+                    label2.Visible = true;
+                    comboBox2.Visible = true;
+                    break;
+                case 2:
+                    pictureBox1.Image = Properties.Resources.Starcraft_II;
+                    label2.Visible = true;
+                    comboBox2.Visible = true;
+                    break;
+                default:
+                    pictureBox1.Image = Properties.Resources.CTcLVGb_758766784;
+                    break;
+
+ 
+
             }
+                    
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,6 +110,24 @@ namespace StarCraft_Remastered_Language_Changer
             else if (Game == 1)
             {
                 RegistryKey LanguageText = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Blizzard Entertainment\\Battle.net\\Launch Options\\S1");
+                if (Opts == 0)
+                {
+                    LanguageText.SetValue("LOCALE", comboBox3.Text, RegistryValueKind.String);
+                    LanguageText.SetValue("LOCALE_AUDIO", comboBox3.Text, RegistryValueKind.String);
+
+                    MessageBox.Show("The Game " + comboBox1.Text + " has been updated with the " + comboBox3.Text + " Language", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (Opts == 1)
+                {
+                    LanguageText.SetValue("LOCALE", comboBox3.Text, RegistryValueKind.String);
+                    LanguageText.SetValue("LOCALE_AUDIO", comboBox4.Text, RegistryValueKind.String);
+
+                    MessageBox.Show("The Game " + comboBox1.Text + " has been updated with the " + comboBox3.Text + " TEXT Language and the " + comboBox4.Text + " AUDIO Language", "Informations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else if (Game == 2)
+            {
+                RegistryKey LanguageText = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Blizzard Entertainment\\Battle.net\\Launch Options\\S2");
                 if (Opts == 0)
                 {
                     LanguageText.SetValue("LOCALE", comboBox3.Text, RegistryValueKind.String);

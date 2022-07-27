@@ -69,6 +69,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Items.AddRange(new object[] {
             "Warcraft III",
+            "Starcraft Remastered",
             "Starcraft II"});
             this.comboBox1.Location = new System.Drawing.Point(12, 31);
             this.comboBox1.Name = "comboBox1";
